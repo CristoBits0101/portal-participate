@@ -1,0 +1,6 @@
+form:                     #      Form -> Definition
+  properties:             #      Form -> Fields
+
+    logoLink:             #      Form -> Definition                
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active

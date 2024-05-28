@@ -1,0 +1,12 @@
+form:                      #      Form -> Definition
+  properties:              #      Form -> Fields
+
+    url:                   #     Field -> Name
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    linkMessage:           #     Field -> Name
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active

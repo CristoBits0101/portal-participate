@@ -1,0 +1,52 @@
+form:                      #      Form -> Definition
+  properties:              #      Form -> Fields
+
+    loginButtonText:       #     Field -> Page Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    login:                 #     Field -> Login Page
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    registerButtonText:    #     Field -> Page Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    register:              #     Field -> Register Page
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    updateProfile:         #     Field -> Update Profile
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    update:                #     Field -> Register Page
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    changeLanguage:        #     Field -> Chage language
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    spanishLanguage:       #     Field -> Spanish Text
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    englishLanguage:       #     Field -> English Text
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    logoutButtonText:      #     Field -> Page Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active

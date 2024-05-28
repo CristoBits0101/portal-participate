@@ -1,0 +1,41 @@
+form:                                #       Form -> Definition
+  properties:                        #       Form -> Fields
+
+    title:                           #      Field -> Name
+      $type: textField               #      Field -> Type
+      required: true                 #      Field -> Mandatory
+      i18n: true                     #  Translate -> Active
+
+    multi:                           #      Field -> Definition
+      $type: jcrMultiField           #       Type -> JCR MultiField
+      i18n: true                     #  Translate -> Active
+      field:                         #      Field -> CompositeField
+        $type: compositeField        #       Type -> CompositeField
+        properties:                  # Properties -> Fields
+
+          article:                   #      Field -> Article
+            $type: textField         #       Type -> TextField
+            required: true           #      Field -> Mandatory
+            i18n: true               #  Translate -> Active
+
+          targetPage:                #      Field -> Target Page
+            $type: linkField         #       Type -> LinkField
+            required: true           #      Field -> Mandatory
+            i18n: true               #  Translate -> Active
+            field:                   #      Field -> LinkField
+              $type: linkField       #       Type -> LinkField
+              datasource:            # Datasource -> Definition
+                $type: jcrDatasource #       Type -> JCR
+                workspace: website   #  Workspace -> Website
+
+  layout:                            #  Reference -> Design
+    $type: tabbedLayout              #  Reference -> Tabbed
+    tabs:                            #  Reference -> Tabs
+
+      columnTitle:                   #  Reference -> Tab
+        fields:                      #  Reference -> Fields
+          - name: title              #      Field -> Column
+
+      columnArticle:                 #  Reference -> Tab
+        fields:                      #  Reference -> Fields
+          - name: multi              #      Field -> Column

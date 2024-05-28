@@ -1,0 +1,71 @@
+form:                     #      Form -> Definition
+  properties:             #      Form -> Fields
+
+    likeButtonText:       #     Field -> Name
+      $type: textField    #     Input -> Text
+      i18n: true          # Translate -> Active
+      required: true      #     Field -> Mandatory
+
+    likeIcon:             #     Field -> Name               
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active
+
+    commentButtonText:    #     Field -> Name
+      $type: textField    #     Input -> Text
+      i18n: true          # Translate -> Active
+      required: true      #     Field -> Mandatory
+
+    commentIcon:          #     Field -> Name               
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active
+
+    repostButtonText:     #     Field -> Name
+      $type: textField    #     Input -> Text
+      i18n: true          # Translate -> Active
+      required: true      #     Field -> Mandatory
+
+    repostIcon:           #     Field -> Name               
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active
+
+    sendButtonText:       #     Field -> Name
+      $type: textField    #     Input -> Text
+      i18n: true          # Translate -> Active
+      required: true      #     Field -> Mandatory
+
+    sendIcon:             #     Field -> Name
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active
+
+    updateIcon:           #     Field -> Name
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active
+
+    updatePage:           #     Field -> Name
+      $type: linkField    #      Type -> LinkField
+      required: true      #     Field -> Mandatory
+      i18n: true          # Translate -> Active
+
+    deleteButtonText:     #     Field -> Name
+      $type: textField    #     Input -> Text
+      i18n: true          # Translate -> Active
+      required: true      #     Field -> Mandatory
+
+    deleteIcon:           #     Field -> Name               
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active
+
+    defaultCommentText:   #     Field -> Name   
+      $type: textField    #     Input -> Text
+      i18n: true          # Translate -> Active
+      required: true      #     Field -> Mandatory
+
+    saveCommentPage:      #     Field -> Name
+      $type: linkField    #      Type -> LinkField
+      required: true      #     Field -> Mandatory
+      i18n: true          # Translate -> Active
+
+    updateCommentPage:    #     Field -> Name
+      $type: linkField    #      Type -> LinkField
+      required: true      #     Field -> Mandatory
+      i18n: true          # Translate -> Active

@@ -1,0 +1,6 @@
+layout:                  # Admincentral -> Design
+  groups:                #       Design -> Groups
+    - name: content      #       Groups -> Group
+      apps:              #        Group -> Apps
+        - name: news     #         Apps -> Name
+        - name: products #         Apps -> Name

@@ -1,0 +1,5 @@
+areas:
+  fields:
+    availableComponents:
+      mostrarFavoritos:
+        id: project-portal-participate:components/main/checkboxTags

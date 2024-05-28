@@ -1,0 +1,34 @@
+form:                                                                 #      Form -> Definition
+  properties:                                                         #      Form -> Fields
+
+    offers:                                                           #     Field -> Company Logo
+      $type: damLinkField                                             #     Field -> Type
+      required: true                                                  #     Field -> Mandatory
+      i18n: true                                                      # Translate -> Active
+
+    highlightedTopicsTitle:                                           #     Field -> Name
+      $type: textField                                                #     Input -> Text
+      i18n: true                                                      # Translate -> Active
+      required: true                                                  #     Field -> Mandatory
+
+    buttonText:
+      $type: textField                                                #     Input -> Text
+      i18n: true                                                      # Translate -> Active
+      required: true                                                  #     Field -> Mandatory
+
+    top:                                                           #     Field -> Company Logo
+      $type: damLinkField                                             #     Field -> Type
+      required: true                                                  #     Field -> Mandatory
+      i18n: true                                                      # Translate -> Active
+
+    url:                                                              #     Field -> Name
+      $type: pageLinkField                                            #     Field -> Type
+      required: true                                                  #     Field -> Mandatory
+      i18n: true                                                      # Translate -> Active
+
+    amountContentDisplay:                                             #     Field -> Name
+      $type: textField                                                #     Field -> Type
+      type: java.lang.Long                                            #      Data -> Type
+      converterClass: com.vaadin.data.converter.StringToLongConverter #      Type -> Dependence
+      i18n: true                                                      # Translate -> Active
+      required: true                                                  #     Field -> Mandatory

@@ -1,0 +1,19 @@
+form:                      #       Form -> Definition
+  properties:              #       Form -> Fields
+
+    titleChat:             #      Field -> Name
+      $type: textField     #      Input -> Text
+      i18n: true           #  Translate -> Active
+
+    informativeMessage:    #     Field -> Welcome Text
+      $type: richTextField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      height: 300          #     Field -> Height
+      tables: true         #     Field -> Tables
+      source: true         #     Field -> Source
+      i18n: true           # Translate -> Active
+
+    textareaMensaje:
+      $type: textField     #     Input -> Text
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active

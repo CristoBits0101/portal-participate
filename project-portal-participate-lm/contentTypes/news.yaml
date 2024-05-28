@@ -1,0 +1,82 @@
+datasource:                  # Workspace -> Definition
+  workspace: news            # workspace -> Name
+  rootPath: /                # workspace -> Root
+  autoCreate: true           # Workspace -> Autoconfigure
+
+model:                       #     Model -> Database
+
+  nodeType: news             #      Node -> Table
+  properties:                #     Table -> Columns
+
+    - name: name             #    Column -> Name
+
+    - name: title            #    Column -> Name
+
+    - name: message          #    Column -> Name
+
+    - name: imageLink        #    Column -> Name
+      type: asset            #      Data -> Type
+
+    - name: mgnl:tags        #    Column -> Name
+
+    - name: location         #    Column -> Name
+
+    - name: starts           #    Column -> Name
+      type: Date             #      Data -> Type
+
+    - name: ends             #    Column -> Name
+      type: Date             #      Data -> Type
+
+    - name: contacts         #    Column -> Name
+      type: contactData      #      Data -> Type
+      multiple: true         #      Data -> Quantity
+      i18n: true             # Translate -> Active
+
+    - name: addresses        #    Column -> Name
+      type: addressData      #      Data -> Type
+      multiple: true         #      Data -> Quantity
+      i18n: true             # Translate -> Active
+
+  subModels:                 # subModels -> Database
+
+    contactData:             # Reference -> Type
+
+      nodeType: contact      #      Node -> Table
+      properties:            #     Table -> Columns
+
+        - name: firstName    #    Column -> Name
+          required: true     #      Data -> Mandatory
+          i18n: true         # Translate -> Active
+
+        - name: familyName   #    Column -> Name
+          i18n: true         # Translate -> Active
+
+        - name: email        #    Column -> Name
+          i18n: true         # Translate -> Active
+
+        - name: mobileNumber #    Column -> Name
+          required: true     #      Data -> Mandatory
+          i18n: true         # Translate -> Active
+
+        - name: phoneNumber  #    Column -> Name
+          required: true     #      Data -> Mandatory
+          i18n: true         # Translate -> Active
+
+    addressData:             # Reference -> Type
+
+      nodeType: address      #      Node -> Table
+      properties:            #     Table -> Columns
+
+        - name: street       #    Column -> Name
+          required: false    #      Data -> Mandatory
+          i18n: true         # Translate -> Active
+
+        - name: province     #    Column -> Name
+          required: false    #      Data -> Mandatory
+          i18n: true         # Translate -> Active
+
+        - name: postalCode   #    Column -> Name
+          i18n: true         # Translate -> Active
+          
+        - name: country      #    Column -> Name
+          i18n: true         # Translate -> Active

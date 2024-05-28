@@ -1,0 +1,7 @@
+form:                  #      Form -> Definition
+  properties:          #      Form -> Fields
+
+    title:             #     Field -> Page Title
+      $type: textField #     Field -> Type
+      required: true   #     Field -> Mandatory
+      i18n: true       # Translate -> Active

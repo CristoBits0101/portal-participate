@@ -1,0 +1,28 @@
+form:                                #       Form -> Definition
+  properties:                        #       Form -> Fields
+
+    multi:                           #      Field -> Definition
+      $type: jcrMultiField           #       Type -> JCR MultiField
+      i18n: true                     #  Translate -> Active
+      field:                         #      Field -> CompositeField
+        $type: compositeField        #       Type -> CompositeField
+        properties:                  # Properties -> Fields
+
+          reference:                 #      Field -> Article
+            $type: textField         #       Type -> TextField
+            required: true           #      Field -> Mandatory
+            i18n: true               #  Translate -> Active
+
+          targetPage:                #      Field -> Target Page
+            $type: linkField         #       Type -> LinkField
+            required: true           #      Field -> Mandatory
+            i18n: true               #  Translate -> Active
+            field:                   #      Field -> LinkField
+              $type: linkField       #       Type -> LinkField
+              datasource:            # Datasource -> Definition
+                $type: jcrDatasource #       Type -> JCR
+                workspace: website   #  Workspace -> Website
+
+          iconLink:                  #      Field -> Name               
+            $type: damLinkField      #      Field -> Type
+            i18n: true               #  Translate -> Active

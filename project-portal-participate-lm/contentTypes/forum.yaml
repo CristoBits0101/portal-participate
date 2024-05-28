@@ -1,0 +1,17 @@
+datasource:                # Workspace -> Definition
+  workspace: forum         # workspace -> Name
+  rootPath: /              # workspace -> Root
+  autoCreate: true         # Workspace -> Autoconfigure
+
+model:                     #     Model -> Database
+
+  nodeType: forum          #      Node -> Table
+  properties:              #     Table -> Columns
+
+    - name: name           #    Column -> Name
+    - name: postAuthor     #    Column -> Name
+    - name: title          #    Column -> Name
+    - name: message        #    Column -> Name
+  
+    - name: commentVisitor #    Column -> Name
+    - name: comment        #    Column -> Name

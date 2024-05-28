@@ -1,0 +1,27 @@
+ form:                     #      Form -> Definition
+  properties:              #      Form -> Fields
+  
+    title:                 #     Field -> Name
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    message:               #     Field -> Name
+      $type: richTextField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    url:                   #     Field -> Name
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    linkMessage:           #     Field -> Name
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    CompanytText:          #     Field -> Name
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active

@@ -1,0 +1,127 @@
+!content-type:products                                                     # apps/products -> contentTypes/products
+
+# appClass: altia.bilbomatica.portalparticipate.websocket.ChatConfig       #        Alert -> Developing
+
+name: products                                                             #          Name -> Internal
+label: Products                                                            #          Name -> Panel
+enabled: true                                                              #       Visible -> True
+icon: icon-tasks-app                                                       #          Icon -> Style
+
+permissions:                                                               #   Permissions -> Handling
+  roles:                                                                   #         Roles -> Allowed
+    superuser: superuser                                                   #     Superuser -> All
+    editors: superuser                                                     #       Editors -> All
+
+subApps:                                                                   #     Reference -> subApps
+
+  browser:                                                                 #     Reference -> Browser
+
+  detail:                                                                  #     Reference -> Details
+    i18n: true                                                             #     Translate -> Active
+
+    form:                                                                  #     Reference -> Form
+      properties:                                                          #     Reference -> Fields
+
+        name:                                                              #         Field -> Column
+          required: true                                                   #          Data -> Mandatory
+          i18n: true                                                       #     Translate -> Active
+
+        title:                                                             #         Field -> Column
+          required: true                                                   #          Data -> Mandatory
+          i18n: true                                                       #     Translate -> Active
+
+        message:                                                           #         Field -> Column
+          $type: richTextField                                             #          Data -> Type
+          type: java.lang.String                                           #          Data -> Typing
+          required: false                                                  #          Data -> Mandatory
+          i18n: true                                                       #     Translate -> Active
+
+        imageLink:                                                         #         Field -> Column
+          fieldType: link                                                  #          Data -> Link
+          targetWorkspace: dam                                             #     Workspace -> Storage
+          appName: assets                                                  #           App -> Link
+          required: false                                                  #          Data -> Mandatory
+          i18n: true                                                       #     Translate -> Active
+
+        mgnl:tags:                                                         #         Field -> Column
+          label: Tags                                                      #         Field -> Label
+          class: info.magnolia.contenttags.ui.field.TagsFieldDefinition    #         Field -> Class
+          i18n: true                                                       #     Translate -> Active
+
+        location:                                                          #         Field -> Column
+          required: true                                                   #          Data -> Mandatory
+          $type: textField                                                 #          Data -> Type 
+          type: java.lang.String                                           #          Data -> Typing
+          i18n: true                                                       #     Translate -> Active
+
+        starts:                                                            #         Field -> Column
+          required: false                                                  #          Data -> Mandatory
+          time: true                                                       #          Hour -> Active
+          timeFormat: HH:mm                                                #          Hour -> Format
+          i18n: true                                                       #     Translate -> Active
+
+        ends:                                                              #         Field -> Column
+          required: false                                                  #          Data -> Mandatory
+          time: true                                                       #          Hour -> Active
+          timeFormat: HH:mm                                                #          Hour -> Format
+          i18n: true                                                       #     Translate -> Active
+
+        contacts:                                                          #         Field -> Column
+          required: true                                                   #          Data -> Mandatory
+          i18n: true                                                       #     Translate -> Active
+
+        addresses:                                                         #         Field -> Column
+          required: false                                                  #          Data -> Mandatory
+          i18n: true                                                       #     Translate -> Active
+
+      layout:                                                              #     Reference -> Design
+        $type: tabbedLayout                                                #     Reference -> Tabbed
+        tabs:                                                              #     Reference -> Tabs
+
+          productData:                                                     #     Reference -> Tab
+            i18n: true                                                     #     Translate -> Active
+            fields:                                                        #     Reference -> Fields
+              - name: name                                                 #         Field -> Column
+              - name: title                                                #         Field -> Column
+              - name: message                                              #         Field -> Column
+              - name: imageLink                                            #         Field -> Column
+              - name: mgnl:tags                                            #         Field -> Column
+              - name: location                                             #         Field -> Column
+              - name: starts                                               #         Field -> Column
+              - name: ends                                                 #         Field -> Column
+
+          productContacts:                                                 #     Reference -> Tab
+            i18n: true                                                     #     Translate -> Active
+            fields:                                                        #     Reference -> Fields
+              - name: contacts                                             #         Field -> Column
+
+          productAddresses:                                                #     Reference -> Tab
+            i18n: true                                                     #     Translate -> Active
+            fields:                                                        #     Reference -> Fields
+              - name: addresses                                            #         Field -> Column
+
+actions:                                                                   #       Actions -> Reference
+  default:                                                                 #       Default -> Reference
+    availability:                                                          #  Availability -> Reference
+      rules:                                                               #         Rules -> Conditions
+        isNodeType:                                                        #         Check -> isNodeType
+          type: mgnl:content                                               #          Type -> mgnl:content
+    class: info.magnolia.ui.admincentral.action.DeleteItemActionDefinition #         Class -> DeleteItemActionDefinition
+    successActionName: deleteItem                                          #       Success -> Delete
+    failureActionName: showDeleteItemFailed                                #       Failure -> Inform
+    confirmationHeader: dialogs.delete.confirmation.header                 #        Header -> Confirmation
+    confirmationMessage: dialogs.delete.confirmation.message               #       Message -> Confirmation
+    label: action.delete.label                                             #         Label -> Delete
+    icon: icon-delete                                                      #          Icon -> Delete
+    i18n: true                                                             #     Translate -> Active
+
+datasource:                                                                #    Datasource -> Definition
+  $type: jcrDatasource                                                     #          Data -> Type
+  workspace: products                                                      #     Workspace -> Name
+  includeProperties: false                                                 #        Import -> Properties 
+  allowedNodeTypes:                                                        #         Nodes -> Allowed
+    - products                                                             #          Node -> Allowed
+    - contact                                                              #          Node -> Allowed
+    - address                                                              #          Node -> Allowed
+    - mgnl:folder                                                          #          Node -> Allowed
+  describeByProperty: name                                                 #     /pathName -> lastName

@@ -1,0 +1,17 @@
+# realmName: public                                                                            #  Instance -> Public
+# defaultRoles:                                                                                #   Default -> Roles
+#   anonymous: anonymous                                                                       #      Role -> Anonymous
+# defaultGroups:                                                                               #   Default -> Groups
+#   pur: portalparticipate-pur                                                                 #     Group -> Name
+# registrationStrategy:                                                                        #  Strategy -> Registration
+#   class: info.magnolia.module.publicuserregistration.strategy.Mail                           #     Class -> Mail
+# passwordRetrievalStrategy:                                                                   #  Strategy -> Password
+#   fromEmail: test@test.com                                                                   #      From -> Test
+#   i18nBasename: info.magnolia.module.publicuserregistration.messages                         #  Basename -> Messages
+#   class: info.magnolia.module.publicuserregistration.password.MailChangePasswordLinkStrategy #     Class -> Mail
+#   emailTemplate: /public-user-registration/templates/mail/password-reset-email.ftl           #  Template -> Reset  
+#   fromName: mail.passwordreminder.from                                                       # From Name -> Reminder 
+#   targetPagePath: /travel/members/forgotten-password/password-change                         #    Target -> Page 
+#   subject: mail.passwordreminder.subject                                                     #   Subject -> Subject
+# userProfileConfiguration:                                                                    #   Profile -> Configuration
+#   userProfileClass: info.magnolia.module.publicuserregistration.UserProfile                  #     Class -> Profile

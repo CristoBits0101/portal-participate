@@ -1,0 +1,102 @@
+!content-type:forum                                                        #   apps/forum -> contentTypes/news
+
+# appClass: altia.bilbomatica.portalparticipate.websocket.ChatConfig       #        Alert -> Developing
+
+name: forum                                                                #         Name -> Internal
+label: Forum                                                               #         Name -> Panel
+enabled: true                                                              #      Visible -> True
+icon: icon-forums-app                                                      #         Icon -> Style
+
+permissions:                                                               #  Permissions -> Handling
+  roles:                                                                   #        Roles -> Allowed
+    superuser: superuser                                                   #    Superuser -> All
+    editors: superuser                                                     #      Editors -> All
+
+subApps:                                                                   #    Reference -> subApps
+
+  browser:                                                                 #    Reference -> Browser
+
+  detail:                                                                  #    Reference -> Details
+    i18n: true                                                             #    Translate -> Active
+
+    form:                                                                  #    Reference -> Form
+      properties:                                                          #    Reference -> Fields
+
+        name:                                                              #        Field -> Column
+          required: true                                                   #         Data -> Mandatory
+          i18n: true                                                       #    Translate -> Active
+
+        postAuthor:                                                        #        Field -> Column
+          $type: textField                                                 #         Type -> TextField
+          required: true                                                   #        Field -> Mandatory
+          i18n: true                                                       #    Translate -> Active
+
+        title:                                                             #        Field -> Column
+          required: true                                                   #         Data -> Mandatory
+          i18n: true                                                       #    Translate -> Active
+
+        message:                                                           #        Field -> Column
+          $type: richTextField                                             #         Data -> Type
+          type: java.lang.String                                           #         Data -> Typing
+          required: true                                                   #         Data -> Mandatory
+          i18n: true                                                       #    Translate -> Active
+
+        comments:                                                             #        Field -> Definition
+          $type: jcrMultiField                                             #         Type -> JCR MultiField
+          i18n: true                                                       #    Translate -> Active
+          field:                                                           #        Field -> CompositeField
+            $type: compositeField                                          #         Type -> CompositeField
+            properties:                                                    #   Properties -> Fields
+
+              commentVisitor:                                              #        Field -> Column
+                $type: textField                                           #         Type -> TextField
+                required: true                                             #        Field -> Mandatory
+                i18n: true                                                 #    Translate -> Active
+
+              comment:                                                    #        Field -> Column
+                $type: richTextField                                       #         Data -> Type
+                type: java.lang.String                                     #         Data -> Typing
+                required: true                                             #         Data -> Mandatory
+                i18n: true                                                 #    Translate -> Active
+
+      layout:                                                              #    Reference -> Design
+        $type: tabbedLayout                                                #    Reference -> Tabbed
+        i18n: true                                                         #    Translate -> Active
+        tabs:                                                              #    Reference -> Tabs
+
+          articleDescription:                                              #    Reference -> Tab
+            i18n: true                                                     #    Translate -> Active
+            fields:                                                        #    Reference -> Fields
+              - name: name                                                 #        Field -> Column
+              - name: postAuthor                                           #        Field -> Column
+              - name: title                                                #        Field -> Column
+              - name: message                                              #        Field -> Column
+
+          articleComments:                                                 #    Reference -> Tab
+            i18n: true                                                     #    Translate -> Active
+            fields:                                                        #    Reference -> Fields
+              - name: comments                                             #        Field -> Column
+
+actions:                                                                   #      Actions -> Reference 
+  default:                                                                 #      Default -> Reference 
+    availability:                                                          # Availability -> Reference 
+      rules:                                                               #        Rules -> Conditions 
+        isNodeType:                                                        #        Check -> isNodeType 
+          type: mgnl:content                                               #         Type -> mgnl:content 
+    class: info.magnolia.ui.admincentral.action.DeleteItemActionDefinition #        Class -> DeleteItemActionDefinition 
+    successActionName: deleteItem                                          #      Success -> Delete 
+    failureActionName: showDeleteItemFailed                                #      Failure -> Inform
+    confirmationHeader: dialogs.delete.confirmation.header                 #       Header -> Confirmation 
+    confirmationMessage: dialogs.delete.confirmation.message               #      Message -> Confirmation 
+    label: action.delete.label                                             #        Label -> Delete 
+    icon: icon-delete                                                      #         Icon -> Delete 
+    i18n: true                                                             #    Translate -> Active 
+
+datasource:                                                                #   Datasource -> Definition
+  $type: jcrDatasource                                                     #         Data -> Type
+  workspace: forum                                                         #    Workspace -> Name
+  includeProperties: false                                                 #       Import -> Properties 
+  allowedNodeTypes:                                                        #        Nodes -> Allowed
+    - forum                                                                #         Node -> Allowed
+    - mgnl:folder                                                          #         Node -> Allowed
+  describeByProperty: name                                                 #    /pathName -> lastName

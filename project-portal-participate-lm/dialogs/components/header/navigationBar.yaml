@@ -1,0 +1,11 @@
+form:                     #      Form -> Definition
+  properties:             #      Form -> Fields
+  
+    page:                 #     Field -> Name
+      $type: textField    #     Field -> Type
+      required: true      #     Field -> Mandatory
+      i18n: true          # Translate -> Active
+
+    homeIconLink:         #     Field -> Name               
+      $type: damLinkField #     Field -> Type
+      i18n: true          # Translate -> Active

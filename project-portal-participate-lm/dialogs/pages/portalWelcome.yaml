@@ -1,0 +1,60 @@
+form:                      #      Form -> Definition
+  properties:              #      Form -> Fields
+
+    title:                 #     Field -> Page Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    login:                 #     Field -> Login Page
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    loginButtonText:       #     Field -> Page Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    logo:                  #     Field -> Company Logo
+      $type: damLinkField  #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    register:              #     Field -> Register Page
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+    
+    registerButtonText:    #     Field -> Page Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    welcomeTitle:          #     Field -> Welcome Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    introduction:          #     Field -> Welcome Text
+      $type: richTextField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      height: 300          #     Field -> Height
+      tables: true         #     Field -> Tables
+      source: true         #     Field -> Source
+      i18n: true           # Translate -> Active
+
+    goHome:                #     Field -> Home Page
+      $type: pageLinkField #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    homeButtonText:        #     Field -> Page Title
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
+
+    companyText:           #     Field -> Company Text
+      $type: textField     #     Field -> Type
+      required: true       #     Field -> Mandatory
+      i18n: true           # Translate -> Active
