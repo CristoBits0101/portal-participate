@@ -1,0 +1,10 @@
+templateScript: /project-portal-participate-v2/templates/pages/dummy-page.ftl
+renderType: freemarker
+visible: true
+dialog: project-portal-participate-v2:pages/dummy-page-properties
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: project-portal-participate-v2:components/dummy-component

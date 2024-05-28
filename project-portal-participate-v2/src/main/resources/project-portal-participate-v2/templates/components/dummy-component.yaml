@@ -1,0 +1,2 @@
+templateScript: /project-portal-participate-v2/templates/components/dummy-component.ftl
+renderType: freemarker
