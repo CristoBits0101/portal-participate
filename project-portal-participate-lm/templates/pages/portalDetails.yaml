@@ -1,0 +1,13 @@
+title: Portal Participate Details                                             #  Template -> Name
+renderType: freemarker                                                        #  Template -> Type
+dialog: project-portal-participate:pages/standardDialog                       #  Template -> Dialog
+templateScript: /project-portal-participate/templates/pages/portalDetails.ftl #  Template -> Path
+
+areas:                                                                        #  Template -> Areas
+
+  main:                                                                       #      Area -> Name
+    type: Simple                                                              # Component -> 1Component
+    maxComponents: 1                                                          # Component -> Quantity
+    availableComponents:                                                      # Component -> Availability
+      showProduct:                                                            # Component -> Name
+        id: project-portal-participate:components/main/showProduct            # Component -> Path

@@ -1,0 +1,19 @@
+title: Community Forum                                                                         # Component -> Title
+renderType: freemarker                                                                         # Component -> Type
+dialog: project-portal-participate:components/main/communityForum                              # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/main/communityForum.ftl       # Component -> Path
+
+areas:                                                                                         #  Template -> Areas
+  header:                                                                                      #      Area -> Name
+    templateScript: /project-portal-participate/templates/components/main/areas/adjustArea.ftl # Component -> Path
+    type: Simple                                                                               # Component -> 1Component
+    maxComponents: 3                                                                           # Component -> Quantity
+    availableComponents:                                                                       # Component -> Availability
+      portalLogo:                                                                              # Component -> Name
+        id: project-portal-participate:components/header/portalLogo                            # Component -> Path
+      navbarMultiLink:                                                                         # Component -> Name
+        id: project-portal-participate:components/header/navbarMultiLink                       # Component -> Path
+      sessionButtons:                                                                          # Component -> Name
+        id: project-portal-participate:components/header/sessionButtons                        # Component -> Path
+      searchPost:                                                                              # Component -> Name
+        id: project-portal-participate:components/header/searchPost                            # Component -> Path

@@ -1,0 +1,42 @@
+title: Portal Participate Authentication                                             #         Name -> Template
+renderType: freemarker                                                               #         Type -> Template
+dialog: project-portal-participate:pages/standardDialog                              #       Dialog -> Template
+templateScript: /project-portal-participate/templates/pages/portalAuth.ftl           #         Path -> Template
+
+areas:                                                                               #        Areas -> Sections
+
+  hiddenContent:                                                                     #         Main -> Area
+    type: simple                                                                     #         Type -> List
+    maxComponents: 6                                                                 #    Component -> Quantity
+    availableComponents:                                                             #    Available -> Components
+      unauthenticatedRedirect:                                                       #  Redirection -> Component
+        id: project-portal-participate:components/main/redirectionAuthenticatedUsers #         Path -> Component
+
+  main:                                                                              #         Main -> Area
+    type: list                                                                       #         Type -> List
+    maxComponents: 12                                                                #    Component -> Quantity
+    availableComponents:                                                             #    Available -> Components
+      login:                                                                         #        Login -> Component
+        id: public-user-registration:components/login                                #         Path -> Component
+      registration:                                                                  # Registration -> Component
+        id: public-user-registration:components/registration                         #         Path -> Component
+      userUpdate:                                                                    #       Update -> Component
+        id: public-user-registration:components/userUpdate                           #         Path -> Component
+      passwordChange:                                                                #       Change -> Component
+        id: public-user-registration:components/passwordChange                       #         Path -> Component
+      forgottenPassword:                                                             #    Forgotten -> Component
+        id: public-user-registration:components/forgottenPassword                    #         Path -> Component
+      enableUser:                                                                    #       Enable -> Component
+        id: public-user-registration:components/enableUser                           #         Path -> Component
+      pageRedirection:                                                               #  Redirection -> Component
+        id: project-portal-participate:components/main/pageRedirection               #         Path -> Component
+      checkboxTags:                                                                  #  Redirection -> Component
+        id: project-portal-participate:components/main/checkboxTags                  #         Path -> Component
+      publishingForm:                                                                #  Redirection -> Component
+        id: project-portal-participate:components/main/publishingForm                #         Path -> Component
+      modifyForm:                                                                    #  Redirection -> Component
+        id: project-portal-participate:components/main/modifyForm                    #         Path -> Component
+      saveCommentForm:                                                               #  Redirection -> Component
+        id: project-portal-participate:components/main/saveCommentForm               #         Path -> Component
+      updateCommentForm:                                                             #  Redirection -> Component
+        id: project-portal-participate:components/main/updateCommentForm             #         Path -> Component

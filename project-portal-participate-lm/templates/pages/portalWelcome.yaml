@@ -1,0 +1,13 @@
+title: Portal Participate Welcome                                                    #    Template -> Name
+renderType: freemarker                                                               #    Template -> Type
+dialog: project-portal-participate:pages/portalWelcome                               #    Template -> Dialog
+templateScript: /project-portal-participate/templates/pages/portalWelcome.ftl        #    Template -> Path
+
+areas:                                                                               #       Areas -> Sections
+
+  hiddenContent:                                                                     #        Main -> Area
+    type: simple                                                                     #        Type -> List
+    maxComponents: 6                                                                 #   Component -> Quantity
+    availableComponents:                                                             #   Available -> Components
+      unauthenticatedRedirect:                                                       # Redirection -> Component
+        id: project-portal-participate:components/main/redirectionAuthenticatedUsers #        Path -> Component

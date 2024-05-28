@@ -1,0 +1,20 @@
+title: Community Chat                                                                          # Component -> Title
+renderType: freemarker                                                                         # Component -> Type
+dialog: project-portal-participate:components/main/communityChat                               # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/main/communityChat.ftl        # Component -> Path
+
+# dialog: altia.bilbomatica.portalparticipate.websocket:components/main/communityChat          #     Alert -> Developing
+# modelClass: altia.bilbomatica.portalparticipate.websocket.chat.CommunityChat                 #     Alert -> Developing
+
+areas:                                                                                         #  Template -> Areas
+  header:                                                                                      #      Area -> Name
+    templateScript: /project-portal-participate/templates/components/main/areas/adjustArea.ftl # Component -> Path
+    type: Simple                                                                               # Component -> 1Component
+    maxComponents: 3                                                                           # Component -> Quantity
+    availableComponents:                                                                       # Component -> Availability
+      portalLogo:                                                                              # Component -> Name
+        id: project-portal-participate:components/header/portalLogo                            # Component -> Path
+      navbarMultiLink:                                                                         # Component -> Name
+        id: project-portal-participate:components/header/navbarMultiLink                       # Component -> Path
+      sessionButtons:                                                                          # Component -> Name
+        id: project-portal-participate:components/header/sessionButtons                        # Component -> Path

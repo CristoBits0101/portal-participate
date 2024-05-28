@@ -1,0 +1,27 @@
+title: Portal Participate Content                                                    #   Template -> Name
+renderType: freemarker                                                               #   Template -> Type
+dialog: project-portal-participate:pages/standardDialog                              #   Template -> Dialog
+templateScript: /project-portal-participate/templates/pages/portalContent.ftl        #   Template -> Path
+
+areas:                                                                               #   Template -> Areas
+
+  nav:                                                                               #       Area -> Name
+    templateScript: /project-portal-participate/templates/pages/areas/adjustArea.ftl #       Area -> Script
+    editable: false                                                                  #     Modify -> Restricted
+    inheritance:                                                                     #    Inherit -> Father
+      enabled: true                                                                  #    Inherit -> Enable
+      components: all                                                                # Components -> All
+
+  main:                                                                              #       Area -> Name
+    type: Simple                                                                     #  Component -> 1Component
+    maxComponents: 1                                                                 #  Component -> Quantity
+    availableComponents:                                                             #  Component -> Availability
+      recentPosts:                                                                   #  Component -> Name
+        id: project-portal-participate:components/main/recentPosts                   #  Component -> Path
+
+  footer:                                                                            #       Area -> Name
+    templateScript: /project-portal-participate/templates/pages/areas/adjustArea.ftl #       Area -> Script
+    editable: false                                                                  #     Modify -> Restricted
+    inheritance:                                                                     #    Inherit -> Father
+      enabled: true                                                                  #    Inherit -> Enable
+      components: all                                                                # Components -> All

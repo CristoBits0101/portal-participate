@@ -1,0 +1,4 @@
+title: Session Pages                                                                                  # Component -> Title
+renderType: freemarker                                                                                # Component -> Type
+dialog: project-portal-participate:components/header/sessionPages/sessionPages                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/header/sessionPages/sessionPages.ftl # Component -> Path

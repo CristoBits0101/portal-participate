@@ -1,0 +1,4 @@
+title: Portal Participate                                                                     # Component -> Title
+renderType: freemarker                                                                        # Component -> Type
+dialog: project-portal-participate:components/footer/portalParticipate                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/footer/portalParticipate.ftl # Component -> Path

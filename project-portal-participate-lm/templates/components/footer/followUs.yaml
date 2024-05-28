@@ -1,0 +1,13 @@
+title: Social Networks                                                                                   # Component -> Title
+renderType: freemarker                                                                                   # Component -> Type
+dialog: project-portal-participate:components/footer/followUs
+templateScript: /project-portal-participate/templates/components/footer/followUs.ftl                     # Component -> Path
+
+areas:                                                                                                   #  Template -> Areas
+  networks:                                                                                              #      Area -> Name
+    templateScript: /project-portal-participate/templates/components/footer/areas/adjustFollowUsArea.ftl # Component -> Path
+    type: Simple                                                                                         # Component -> 1Component
+    maxComponents: 6                                                                                     # Component -> Quantity
+    availableComponents:                                                                                 # Component -> Availability
+      socialNetworks:                                                                                    # Component -> Name
+        id: project-portal-participate:components/footer/networks/socialNetworks                         # Component -> Path

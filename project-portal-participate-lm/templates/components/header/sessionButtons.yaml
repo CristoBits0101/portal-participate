@@ -1,0 +1,12 @@
+title: Session Buttons                                                                     # Component -> Title
+renderType: freemarker                                                                     # Component -> Type
+dialog: project-portal-participate:components/header/sessionButtons                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/header/sessionButtons.ftl # Component -> Path
+
+areas:                                                                                     #  Template -> Areas
+  sessionPages:                                                                            #      Area -> Name
+    type: Simple                                                                           # Component -> 1Component
+    maxComponents: 8                                                                       # Component -> Quantity
+    availableComponents:                                                                   # Component -> Availability
+      socialNetworks:                                                                      # Component -> Name
+        id: project-portal-participate:components/header/sessionPages/sessionPages         # Component -> Path

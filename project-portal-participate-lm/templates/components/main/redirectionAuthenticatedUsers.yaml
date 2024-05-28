@@ -1,0 +1,4 @@
+title: Redirection Authenticated Users                                                                  # Component -> Title
+renderType: freemarker                                                                                  # Component -> Type
+dialog: project-portal-participate:components/main/redirectionAuthenticatedUsers                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/main/redirectionAuthenticatedUsers.ftl # Component -> Path

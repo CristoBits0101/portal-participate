@@ -1,0 +1,26 @@
+title: Portal Participate Community                                             #  Template -> Name
+renderType: freemarker                                                          #  Template -> Type
+dialog: project-portal-participate:pages/standardDialog                         #  Template -> Dialog
+templateScript: /project-portal-participate/templates/pages/portalCommunity.ftl #  Template -> Path
+
+areas:                                                                          #  Template -> Areas
+
+  aside:                                                                        #      Area -> Name
+    type: simple                                                                # Component -> 1Component
+    maxComponents: 3                                                            # Component -> Quantity
+    availableComponents:                                                        # Component -> Availability
+      navbarMultiLink:                                                          # Component -> Name
+        id: project-portal-participate:components/aside/navbarMultiLink         # Component -> Path
+      onlineUsers:                                                              # Component -> Name
+        id: project-portal-participate:components/aside/onlineUsers             # Component -> Path
+      createPost:                                                               # Component -> Name
+        id: project-portal-participate:components/aside/createPost              # Component -> Path
+
+  main:                                                                         #      Area -> Name
+    type: simple                                                                # Component -> 1Component
+    maxComponents: 1                                                            # Component -> Quantity
+    availableComponents:                                                        # Component -> Availability
+      communityChat:                                                            # Component -> Name
+        id: project-portal-participate:components/main/communityChat            # Component -> Path
+      communityForum:                                                           # Component -> Name
+        id: project-portal-participate:components/main/communityForum           # Component -> Path

@@ -1,0 +1,52 @@
+title: Portal Participate Home                                                       #  Template -> Name
+renderType: freemarker                                                               #  Template -> Type
+dialog: project-portal-participate:pages/standardDialog                              #  Template -> Dialog
+templateScript: /project-portal-participate/templates/pages/portalHome.ftl           #  Template -> Path
+
+areas:                                                                               #  Template -> Areas
+
+  nav:                                                                               #      Area -> Name
+    templateScript: /project-portal-participate/templates/pages/areas/adjustArea.ftl #      Area -> Script
+    type: list                                                                       # Component -> Multicomponent
+    maxComponents: 3                                                                 # Component -> Quantity
+    availableComponents:                                                             # Component -> Availability
+      portalLogo:                                                                    # Component -> Name
+        id: project-portal-participate:components/header/portalLogo                  # Component -> Path
+      navbarMultiLink:                                                               # Component -> Name
+        id: project-portal-participate:components/header/navbarMultiLink             # Component -> Path
+      navigationBar:                                                                 # Component -> Name
+        id: project-portal-participate:components/header/navigationBar               # Component -> Path
+      sessionButtons:                                                                # Component -> Name
+        id: project-portal-participate:components/header/sessionButtons              # Component -> Path
+
+  header:                                                                            #      Area -> Name
+    type: Simple                                                                     # Component -> 1Component
+    maxComponents: 1                                                                 # Component -> Quantity
+    availableComponents:                                                             # Component -> Availability
+      presentationBanner:                                                            # Component -> Name
+        id: project-portal-participate:components/header/presentationBanner          # Component -> Path
+
+  main:                                                                              #      Area -> Name
+    type: Simple                                                                     # Component -> 1Component
+    maxComponents: 1                                                                 # Component -> Quantity
+    availableComponents:                                                             # Component -> Availability
+      recentPosts:                                                                   # Component -> Name
+        id: project-portal-participate:components/main/recentPosts                   # Component -> Path
+
+  aside:                                                                             #      Area -> Name
+    type: Simple                                                                     # Component -> 1Component
+    availableComponents:                                                             # Component -> Availability
+      highlightedTopics:                                                             # Component -> Name
+        id: project-portal-participate:components/aside/highlightedTopics            # Component -> Path
+
+  footer:                                                                            #      Area -> Name
+    templateScript: /project-portal-participate/templates/pages/areas/adjustArea.ftl #      Area -> Script
+    type: list                                                                       # Component -> Multicomponent
+    maxComponents: 4                                                                 # Component -> Quantity
+    availableComponents:                                                             # Component -> Availability
+      followUs:                                                                      # Component -> Name
+        id: project-portal-participate:components/footer/followUs                    # Component -> Path
+      general:                                                                       # Component -> Name
+        id: project-portal-participate:components/footer/generalInformation          # Component -> Path
+      portalParticipate:                                                             # Component -> Name
+        id: project-portal-participate:components/footer/portalParticipate           # Component -> Path

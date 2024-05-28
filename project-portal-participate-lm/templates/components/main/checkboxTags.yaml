@@ -1,0 +1,3 @@
+title: Checkbox Tags                                                                   # Component -> Title
+renderType: freemarker                                                                 # Component -> Type
+templateScript: /project-portal-participate/templates/components/main/checkboxTags.ftl # Component -> Path

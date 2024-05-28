@@ -1,0 +1,4 @@
+title: Portal Logo                                                                     # Component -> Title
+renderType: freemarker                                                                 # Component -> Type
+dialog: project-portal-participate:components/header/portalLogo                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/header/portalLogo.ftl # Component -> Path

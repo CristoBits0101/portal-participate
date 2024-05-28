@@ -1,0 +1,4 @@
+title: Save comment form                                                                  # Component -> Title
+renderType: freemarker                                                                    # Component -> Type
+dialog: project-portal-participate:components/main/commentForm                            # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/main/saveCommentForm.ftl # Component -> Path

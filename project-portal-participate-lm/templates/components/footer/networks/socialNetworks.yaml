@@ -1,0 +1,4 @@
+title: Social Networks                                                                              # Component -> Title
+renderType: freemarker                                                                              # Component -> Type
+dialog: project-portal-participate:components/footer/networks/socialNetworks                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/footer/networks/socialNetworks.ftl # Component -> Path

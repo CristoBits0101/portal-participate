@@ -1,0 +1,4 @@
+title: Highlighted Topics                                                                    # Component -> Title
+renderType: freemarker                                                                       # Component -> Type
+dialog: project-portal-participate:components/aside/highlightedTopics                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/aside/highlightedTopics.ftl # Component -> Path

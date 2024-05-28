@@ -1,0 +1,4 @@
+title: Online Users                                                                    # Component -> Title
+renderType: freemarker                                                                 # Component -> Type
+dialog: project-portal-participate:components/aside/onlineUsers                        # Component -> Dialog
+templateScript: /project-portal-participate/templates/components/aside/onlineUsers.ftl # Component -> Path
