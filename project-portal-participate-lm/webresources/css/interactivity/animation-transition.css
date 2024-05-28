@@ -1,0 +1,224 @@
+/* TransUp Styles */
+.transUp {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.transUp:hover {
+    transform: translatey(-0.3125rem);
+    -webkit-transform: translatey(-0.3125rem);
+    -moz-transform: translatey(-0.2rem);
+}
+
+/* Rotate Styles */
+.rotate-360 {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.rotate-360:hover {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+}
+
+.rotate {
+    transform: rotate(0deg);
+    animation: none;
+}
+
+.rotate:hover {
+    animation: rotate 10s infinite;
+}
+
+/* Swing Styles */
+.swing:hover {
+    animation-name: swing;
+    -webkit-animation-name: swing;
+    -moz-animation-name: swing;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+/* CTA Styles */
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 0.75rem 1.125rem;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #283F62;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 0.195rem;
+    background: #E5EDF590;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    transition: all 0.3s ease;
+}
+
+/* BTN Styles */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    border: 0.1875rem solid #283F62;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #283F62;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}
+
+/* LDS Styles */
+.lds-default,
+.lds-default div {
+    box-sizing: border-box;
+}
+
+.lds-default {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-default div {
+    position: absolute;
+    width: 6.4px;
+    height: 6.4px;
+    background: currentColor;
+    border-radius: 50%;
+    animation: lds-default 1.2s linear infinite;
+}
+
+.lds-default div:nth-child(1) {
+    animation-delay: 0s;
+    top: 36.8px;
+    left: 66.24px;
+}
+
+/* TransRight Styles */
+.transRight {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.transRight:hover {
+    transform: translatex(20px);
+    -webkit-transform: translatex(20px);
+    -moz-transform: translatex(20px);
+    cursor: pointer;
+}
+
+/* Rotate Keyframes */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Swing Keyframes */
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    to {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+/* MoveGradient Keyframes */
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+/* Gradient Keyframes */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* LDS Keyframes */
+@keyframes lds-default {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
